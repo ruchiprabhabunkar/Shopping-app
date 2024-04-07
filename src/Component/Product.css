@@ -1,0 +1,114 @@
+
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    margin: 0;
+    height: 50px;
+} 
+.header li{
+    list-style: none;
+    font-size: large;
+    /* margin-top: 10px; */
+    margin: 10px 10px;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+}
+#btns:hover{
+    /* padding: 5px 30px;
+    border: none;
+    outline: none; */
+    background-color: rgb(171, 225, 171);
+    color: white;
+    cursor: pointer;
+    /* border-radius: 4px;
+    font-size: 20px;
+    display: block; */
+    /* margin: 0 auto; */
+    /* transition: 0.5s all ; */
+}
+#cart{
+    font-size: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-left: 10px;
+    color: black;
+}
+
+#btns{
+    padding: 5px 30px 0px;
+    border: none;
+    outline: none;
+    background-color: lightblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.5s all;
+    margin-top: 20px;
+    margin-bottom: 20px;
+     
+}
+
+.main_div{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+}
+.detail{
+    border: 2px solid black;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.main_div img{
+    width: 150px;
+    height: 150px; 
+    margin-left: 113px;
+    margin-top: auto;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+}
+.cartItem{
+    display: flex;
+    list-style: none; 
+}
+.cartItem li{
+    margin: 10px 40px;
+    padding-top: 20px;
+}
+.cartItem h3{
+    padding-top: 40px;
+}
+.cartItem button{
+    margin-top: 20px;
+    margin-left: 100px;
+    background-color: rgb(199, 140, 136);
+    color: white;
+    border-radius: 4px;
+    font-size: 20px;
+    display: block;
+    border: none;
+    margin-top: 56px;
+}
+
+.cart img{
+    width: 150px;
+    height: 150px; 
+   margin-top: auto;
+
+}
+.category button{
+margin:  10px 20px;
+background-color: transparent;
+border:1px solid black;
+font-size: 15px;
+
+}
