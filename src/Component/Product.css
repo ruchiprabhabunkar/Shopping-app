@@ -16,12 +16,12 @@
     color: white;
     text-decoration: none;
 }
-#btns:hover{
+#btns:active{
     /* padding: 5px 30px;
     border: none;
     outline: none; */
-    background-color: rgb(171, 225, 171);
-    color: white;
+    background-color: rgb(65, 238, 65);
+    color: black;
     cursor: pointer;
     /* border-radius: 4px;
     font-size: 20px;
@@ -72,43 +72,9 @@
     margin-left: 113px;
     margin-top: auto;
 }
-.icon{
-    width: 40px;
-    height: 40px;
-}
-.cartItem{
-    display: flex;
-    list-style: none; 
-}
-.cartItem li{
-    margin: 10px 40px;
-    padding-top: 20px;
-}
-.cartItem h3{
-    padding-top: 40px;
-}
-.cartItem button{
-    margin-top: 20px;
-    margin-left: 100px;
-    background-color: rgb(199, 140, 136);
-    color: white;
-    border-radius: 4px;
-    font-size: 20px;
-    display: block;
-    border: none;
-    margin-top: 56px;
-}
-
-.cart img{
-    width: 150px;
-    height: 150px; 
-   margin-top: auto;
-
-}
 .category button{
 margin:  10px 20px;
 background-color: transparent;
 border:1px solid black;
 font-size: 15px;
-
 }

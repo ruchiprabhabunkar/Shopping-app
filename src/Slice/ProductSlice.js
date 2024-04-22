@@ -11,7 +11,6 @@ initialState:{
     data:null,
     isError:false
 },
-
 extraReducers: (builder)=>{
     builder.addCase(fetchapi.pending,(state)=>{
         state.isLoading=true
@@ -21,7 +20,7 @@ extraReducers: (builder)=>{
         state.isLoading=false;
         state.data=action.payload;
     });
-
+        
     builder.addCase(fetchapi.rejected,(state,action)=>{
         console.log("error",action.payload);
         state.isError=true;

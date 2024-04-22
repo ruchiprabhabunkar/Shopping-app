@@ -3,9 +3,11 @@ import {useDispatch, useSelector} from "react-redux"
 import {fetchapi} from '../Slice/ProductSlice'
 import "./Product.css"
 import { addToCart } from '../Slice/CartSlice';
-
 function Product() {
+
   const[filter,setFilter]=useState('')
+  
+  const[edit,setEdit]=useState(false)
 
   const dispatch = useDispatch()
   const product=useSelector((state)=>state.product)
@@ -15,18 +17,13 @@ useEffect(()=>{
  },[dispatch])
  
  const cartProduct=(val)=>{
-  console.log(product,val)
-  
   dispatch(addToCart(val))
+  setEdit(true)
  }
- 
-
 const filterProduct=(cat)=>{
 const updateList=product.data.filter((val)=>val.category === cat)
 setFilter(updateList)
 }
-
-
 return (
     <div>
       <div className='category'>
@@ -36,18 +33,27 @@ return (
       <button onClick={ ()=>filterProduct( "electronics")}>Electronics</button>
       <button onClick={()=>{filterProduct("jewelery")}}>Jwellery</button>
       </div>
-
-    <div className='main_div'>
-    {filter && filter.map((val,idx)=>(
+    <div>
+       { filter ? ( <div className='main_div'>{filter && filter.map((val,idx)=>(
                 <div className='detail' key={idx}>
                 <img src={val.image} alt=""/>
                 <h3>Title:{val.title}</h3>
                 <h3>Price:{val.price}</h3>
                 <h3>Category:{val.category}</h3>
-                <button id='btns'  onClick={()=>{cartProduct(val)}}>Add to cart</button>
+                <button id='btns'  onClick={()=>{cartProduct(val)}}>Add to Cart</button>
             </div>
           ))
-    }
+    }</div>):(<div className='main_div'>{product.data && product.data.map((val,idx)=>(
+      <div className='detail' key={idx}>
+      <img src={val.image} alt=""/>
+      <h3>Title:{val.title}</h3>
+      <h3>Price:{val.price}</h3>
+      <h3>Category:{val.category}</h3>
+     <button id='btns'  onClick={()=>{cartProduct(val)}}>Add to Cart</button>
+  </div>
+))
+}</div>)}
+  
      </div>
      </div>
   )
