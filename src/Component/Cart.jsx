@@ -13,7 +13,7 @@ function Cart() {
       {cartItems.length === 0 ? (
         <div>
           <h1>Your cart is empty</h1>
-          <div className='link'><Link to="/">Start shopping</Link></div> 
+          <div className='link'><Link to="/">Start's shopping</Link></div> 
         </div>
       ) : (
         <div>
