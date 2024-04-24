@@ -19,7 +19,7 @@ function Cart() {
         <div>
           <h1>Shopping Cart</h1>
           <div className='cart-header '>
-            <li><h4>PRODUCT</h4></li>
+            <li><h4>PRODUCTS</h4></li>
             <li><h4>PRICE</h4></li>
             <li><h4>QUANTITY</h4></li>
             <li><h4>TOTAL</h4></li>
@@ -30,7 +30,7 @@ function Cart() {
                <div className='Product'>
                <li id='product-id'><img src={item.image} alt=""/></li>
                <li id='product-id'><h3> {item.title}</h3>
-               <button className='remove' onClick={() => dispatch(remove(item.id))}>Remove</button></li>
+               <button className='remove' onClick={() => dispatch(remove(item.id))}>Remove </button></li>
                </div>
                <li>
                 <h3>Rs{item.price} </h3></li>
