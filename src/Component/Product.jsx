@@ -7,7 +7,7 @@ function Product() {
 
   const[filter,setFilter]=useState('')
   
-  const[edit,setEdit]=useState(false)
+  // const[edit,setEdit]=useState(false)
 
   const dispatch = useDispatch()
   const product=useSelector((state)=>state.product)
@@ -18,7 +18,7 @@ useEffect(()=>{
  
  const cartProduct=(val)=>{
   dispatch(addToCart(val))
-  setEdit(true)
+  // setEdit(true)
  }
 const filterProduct=(cat)=>{
 const updateList=product.data.filter((val)=>val.category === cat)
@@ -50,6 +50,7 @@ return (
       <h3>Price:{val.price}</h3>
       <h3>Category:{val.category}</h3>
      <button id='btns'  onClick={()=>{cartProduct(val)}}>Add to Cart</button>
+     
   </div>
 ))
 }</div>)}
