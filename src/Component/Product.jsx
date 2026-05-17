@@ -50,7 +50,7 @@ return (
 
 
       <div className='category'>
-      <button onClick={()=>setFilter(product.data)}>All</button>
+      <button onClick={()=>setFilter(product.data)} >All</button>
         <button onClick= { ()=>filterProduct("women's clothing")} >Women's wear</button>
       <button onClick={()=>filterProduct("men's clothing")}>Men's wear</button>
       <button onClick={ ()=>filterProduct( "electronics")}>Electronics</button>
