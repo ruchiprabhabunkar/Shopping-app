@@ -4,13 +4,14 @@ import { addition, clearAll, remove, subtraction } from '../Slice/CartSlice';
 import { Link } from 'react-router-dom';
 import './Cart.css';
 
-function Cart() {
+function Cart({signInUsers}) {
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart.cart);
   const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  
   return (
     <div className='cart'>
-      {cartItems.length === 0 ? (
+      {cartItems.length === 0  && signInUsers==null ? (
         <div>
           <h1>Your cart is empty</h1>
           <div className='link'><Link to="/">Start shopping</Link></div> 

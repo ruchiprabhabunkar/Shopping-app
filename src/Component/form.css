@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --primary-gradient: linear-gradient(135deg,#7c3aed,#2563eb);
+    --primary-color:#7c3aed;
+    --dark:#111827;
+    --gray:#6b7280;
+    --light:#f9fafb;
+    --border:#e5e7eb;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background: linear-gradient(135deg,#eef2ff,#f5f3ff);
+    min-height:100vh;
+}
+
+/* ---------- Main Auth Layout ---------- */
+
+.auth-page{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+}
+
+/* ---------- Card ---------- */
+
+.auth-card{
+    width:100%;
+    max-width:450px;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:24px;
+    padding:40px;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08),
+    0 4px 10px rgba(124,58,237,0.08);
+    animation:fadeUp .4s ease;
+}
+
+/* ---------- Heading ---------- */
+
+.auth-logo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.auth-logo h1{
+    font-size:2.3rem;
+    font-weight:700;
+    background:var(--primary-gradient);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    letter-spacing:-1px;
+}
+
+.auth-card h2{
+    font-size:2rem;
+    color:var(--dark);
+    margin-bottom:8px;
+    text-align:center;
+}
+
+.subtitle{
+    text-align:center;
+    color:var(--gray);
+    margin-bottom:30px;
+    font-size:0.95rem;
+}
+
+/* ---------- Inputs ---------- */
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-size:0.92rem;
+    font-weight:500;
+    color:var(--dark);
+}
+
+.input-group input,
+.input-group textarea{
+    width:100%;
+    padding:15px 16px;
+    border-radius:12px;
+    border:1px solid var(--border);
+    background:#ffffff;
+    font-size:0.95rem;
+    color:var(--dark);
+    transition:all .3s ease;
+    font-family:'Poppins',sans-serif;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    outline:none;
+    border-color:var(--primary-color);
+    box-shadow:0 0 0 4px rgba(124,58,237,0.12);
+}
+
+/* ---------- Button ---------- */
+
+.submit-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:var(--primary-gradient);
+    color:#fff;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:all .3s ease;
+    margin-top:10px;
+}
+
+.submit-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(124,58,237,0.25);
+}
+
+/* ---------- Footer ---------- */
+
+.auth-footer{
+    margin-top:25px;
+    text-align:center;
+}
+
+.auth-footer p{
+    color:var(--gray);
+    margin-bottom:8px;
+}
+
+.auth-footer a{
+    color:var(--primary-color);
+    font-weight:600;
+    text-decoration:none;
+}
+
+.auth-footer a:hover{
+    text-decoration:underline;
+}
+
+/* ---------- Animation ---------- */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:500px){
+
+    .auth-card{
+        padding:30px 22px;
+        border-radius:20px;
+    }
+
+    .auth-card h2{
+        font-size:1.7rem;
+    }
+
+    .auth-logo h1{
+        font-size:2rem;
+    }
+}
