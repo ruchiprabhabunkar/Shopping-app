@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes,Route, useNavigate} from 'react-router-dom'
+import {  Routes,Route} from 'react-router-dom'
 import Product from "./Component/Product";
 import Cart from "./Component/Cart"
 import Header from './Component/Header';
@@ -55,7 +55,7 @@ dispatch(clearAll())
     return(
 
     <div className="App">  
-    <Router>
+    
     <Header signInUsers = {signInUsers}  logout={logout}  />
     <Routes>
     <Route path='/' element={<Product  signInUsers = {signInUsers}/>}/>
@@ -63,7 +63,7 @@ dispatch(clearAll())
     <Route path='/signUp' element={<SignUp  addUser={addUser} />}/>
     <Route path='/signIn' element={<SignIn addLoginUser={addLoginUser}/>}/>
     </Routes>
-    </Router>  
+    
     </div>
 )
 }

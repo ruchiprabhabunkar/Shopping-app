@@ -11,7 +11,7 @@ function Cart({signInUsers}) {
   
   return (
     <div className='cart'>
-      {cartItems.length === 0  && signInUsers==null ? (
+      {cartItems.length === 0 ? (
         <div>
           <h1>Your cart is empty</h1>
           <div className='link'><Link to="/">Start shopping</Link></div> 
